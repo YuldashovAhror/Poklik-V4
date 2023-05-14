@@ -1,0 +1,44 @@
+*, ::after, ::before {
+  box-sizing: border-box!important;
+}
+.general {
+    &__container {
+        padding: 0 12.5rem;
+    }
+    &__top {
+    }
+    &__title {
+    }
+    &__subtitle {
+    }
+    &-R {
+        font-family: "DMSans-R";
+    }
+    &-M {
+        font-family: "DMSans-M";
+    }
+    &-B {
+        font-family: "DMSans-B";
+    }
+    &-GR {
+        font-family: "GTWalsheimPro-R";
+    }
+    &-GM {
+        font-family: "GTWalsheimPro-M";
+    }
+    &-GB {
+        font-family: 'GTWalsheimPro-B';
+    }
+}
+@media (max-width: 900.98px) {
+    .general {
+        &__container {
+            padding: 0 2rem;
+        }
+        &__top {
+
+        }
+        &__title {
+        }
+    }
+}

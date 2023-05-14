@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'DMSans-R';
+    src: url('../css/font/dmsans/DMSans-Regular.eot');
+    src: local('DM Sans Regular'), local('DMSans-Regular'),
+    url('../css/font/dmsans/DMSans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../css/font/dmsans/DMSans-Regular.woff2') format('woff2'),
+    url('../css/font/dmsans/DMSans-Regular.woff') format('woff'),
+    url('../css/font/dmsans/DMSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DMSans-M';
+    src: url('../css/font/dmsans/DMSans-Medium.eot');
+    src: local('DM Sans Medium'), local('DMSans-Medium'),
+    url('../css/font/dmsans/DMSans-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../css/font/dmsans/DMSans-Medium.woff2') format('woff2'),
+    url('../css/font/dmsans/DMSans-Medium.woff') format('woff'),
+    url('../css/font/dmsans/DMSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DMSans-B';
+    src: url('../css/font/dmsans/DMSans-Bold.eot');
+    src: local('DM Sans Bold'), local('DMSans-Bold'),
+    url('../css/font/dmsans/DMSans-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../css/font/dmsans/DMSans-Bold.woff2') format('woff2'),
+    url('../css/font/dmsans/DMSans-Bold.woff') format('woff'),
+    url('../css/font/dmsans/DMSans-Bold.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GTWalsheimPro-R';
+    src: url('../css/font/GTWalsheimPro/GTWalsheimPro-Regular.eot');
+    src: local('GT Walsheim Pro Regular'), local('GTWalsheimPro-Regular'),
+    url('../css/font/GTWalsheimPro/GTWalsheimPro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../css/font/GTWalsheimPro/GTWalsheimPro-Regular.woff2') format('woff2'),
+    url('../css/font/GTWalsheimPro/GTWalsheimPro-Regular.woff') format('woff'),
+    url('../css/font/GTWalsheimPro/GTWalsheimPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GTWalsheimPro-M';
+    src: url('../css/font/GTWalsheimPro/GTWalsheimPro-Medium.eot');
+    src: local('GT Walsheim Pro Medium'), local('GTWalsheimPro-Medium'),
+    url('../css/font/GTWalsheimPro/GTWalsheimPro-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../css/font/GTWalsheimPro/GTWalsheimPro-Medium.woff2') format('woff2'),
+    url('../css/font/GTWalsheimPro/GTWalsheimPro-Medium.woff') format('woff'),
+    url('../css/font/GTWalsheimPro/GTWalsheimPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GTWalsheimPro-B';
+    src: url('../css/font/GTWalsheimPro/GTWalsheimPro-Bold.eot');
+    src: local('GT Walsheim Pro Bold'), local('GTWalsheimPro-Bold'),
+    url('../css/font/GTWalsheimPro/GTWalsheimPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../css/font/GTWalsheimPro/GTWalsheimPro-Bold.woff2') format('woff2'),
+    url('../css/font/GTWalsheimPro/GTWalsheimPro-Bold.woff') format('woff'),
+    url('../css/font/GTWalsheimPro/GTWalsheimPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}

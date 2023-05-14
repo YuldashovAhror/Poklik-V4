@@ -1,0 +1,800 @@
+//==========Media===========
+@media (min-width: 2000.98px) {
+  :root {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1930.98px) {
+    :root {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1800.98px) {
+  :root {
+    font-size: 19px;
+  }
+}
+@media (max-width: 1700.98px) {
+  :root {
+    font-size: 17px;
+  }
+}
+@media (max-width: 1600.98px) {
+  :root {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1500.98px) {
+  :root {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1400.98px) {
+  :root {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1100.98px) {
+  :root {
+    font-size: 10px;
+  }
+}
+@media (max-width: 1000.98px) {
+  :root {
+    font-size: 10px;
+  }
+}
+@media (min-width: 901px) {
+    .d__none {
+        display: none;
+    }
+}
+@media (max-width: 900.98px) {
+  :root {
+    font-size: 11px;
+  }
+  body {
+    &.on {
+      overflow: hidden;
+    }
+  }
+    .preloader {
+        background-image: url(../img/bg/bg-preloader-mob.jpg);
+        &__logo {
+            max-width: 25rem;
+        }
+    }
+    .wrapper {
+        .section {
+            &__main {
+                background-image: url(../img/bg/bg-preloader-mob.jpg);
+                .main {
+                    &__slider {
+                        &-frame {
+                            flex-direction: column;
+                            gap: 3.2rem;
+                            padding-left: 2rem;
+                            padding-right: 2rem;
+                        }
+                        &-photo {
+                            position: relative;
+                            padding: 0rem;
+                            .photo {
+                                &__one {
+                                    width: 100%;
+                                    height: 22rem;
+                                    border-radius: 2rem;
+                                }
+                                &__two {
+                                    left: unset;
+                                    right: 0rem;
+                                    top: -1.5rem;
+                                }
+                                &__three {
+                                    left: -1.4rem;
+                                    bottom: 16.75rem;
+                                }
+                            }
+                        }
+                    }
+                    &__subtitle {
+                        font-size: 1.6rem;
+                        margin-bottom: 2.4rem;
+                    }
+                    &__title {
+                        font-size: 4.3rem;
+                        margin-bottom: 2.1rem;
+                    }
+                    &__link {
+                        display: block;
+                        padding: 1.4rem;
+                        border-radius: .5rem;
+                        font-size: 1.6rem;
+                    }
+                    &__bottom {
+                        margin-top: 5.2rem;
+                        button {
+                            padding: 1.1rem 1.8rem;
+                            svg {
+                                max-width: 2.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+            &__feedback {
+                padding-top: 4.5rem;
+                padding-bottom: 3rem;
+                .feedback {
+                    &__title {
+                        font-size: 3rem;
+                        img {
+                            display: none;
+                        }
+                    }
+                    &__form {
+                        flex-direction: column;
+                        gap: 1.5rem;
+                        input, button {
+                            width: 100%;
+                            border-radius: .5rem;
+                            font-size: 1.6rem;
+                            padding: 1.8rem 3.2rem;
+                        }
+                    }
+                }
+            }
+            &__about {
+                background-position: left top;
+                -webkit-background-size: cover;
+                background-size: cover;
+                padding-top: 3.3rem;
+                padding-bottom: 9.2rem;
+                .about {
+                    flex-direction: column;
+                    &__pics {
+                        display: none;
+                    }
+                    &__mob {
+                        display: block;
+                        max-width: 100%;
+                        height: auto;
+                        margin-bottom: 1.1rem;
+                    }
+                    &__content {
+                        max-width: 100%;
+                    }
+                    &__name {
+                        font-size: 1.6rem;
+                    }
+                    &__title {
+                        font-size: 3.4rem;
+                        margin-bottom: 2rem;
+                        line-height: 120%;
+                        position: relative;
+                        span {
+                            display: inline;
+                            max-width: 100%;
+                        }
+                        img {
+                            position: absolute;
+                            display: block;
+                            left: 80%;
+                            bottom: 0;
+                        }
+                    }
+                    &__txt {
+                        font-size: 1.4rem;
+                        margin-bottom: 2.4rem;
+                        max-width: 100%;
+                    }
+                    &__container {
+                        max-width: 100%;
+                        &-title {
+                            font-size: 1.6rem;
+                            margin-bottom: 6.5rem;
+                        }
+                    }
+                    &__features {
+                        margin-bottom: 3.5rem;
+                        &-pic {
+                            margin-right: 1.2rem;
+                            width: 42%;
+                            height: 12rem;
+                            border-radius: 1.1rem;
+                        }
+                    }
+                    &__list {
+                        p {
+                            margin-bottom: 1.4rem;
+                            font-size: 1.6rem;
+                            align-items: flex-start;
+                            img {
+                                width: 2.2rem;
+                                margin-right: 1.4rem;
+                            }
+                        }
+                    }
+                    &__bottom {
+                        flex-direction: column-reverse;
+                        align-items: flex-start;
+                    }
+                    &__btn {
+                        width: 100%;
+                        margin-right: 0;
+                        font-size: 1.6rem;
+                        border-radius: .5rem;
+                        padding: 1.4rem;
+                        margin-top: 1.4rem;
+                    }
+                    &__calling {
+                        .circle {
+                            min-width: 6rem;
+                            height: 6rem;
+                            margin-right: 2rem;
+                            img {
+                                width: 2.8rem;
+                            }
+                        }
+                        p {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+            &__count {
+                padding-top: 9rem;
+                padding-bottom: 9rem;
+                .general__container {
+                    padding: 0;
+                }
+                .count {
+                    max-width: 100%;
+                    overflow-x: auto;
+                    @include flexStart();
+                    padding: 0 2rem;
+                    &__item {
+                        width: 100%;
+                        min-width: 78%;
+                        padding: 4.8rem 1.6rem;
+                        border-radius: 2rem 2rem 0 0;
+                    }
+                    &__title {
+                        font-size: 3.8rem;
+                        margin-bottom: .5rem;
+                    }
+                    &__subtitle {
+                        font-size: 1.6rem;
+                        white-space: nowrap;
+                    }
+                }
+            }
+            &__services {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+                .services {
+                    &__top {
+                        span {
+                            font-size: 1.6rem;
+                        }
+                        h2 {
+                            @include flexStart();
+                            align-items: flex-end;
+                            font-size: 3.4rem;
+                            text-align: left;
+                            img {
+                                width: 7.1rem;
+                            }
+                        }
+                    }
+                    &__container {
+                        flex-direction: column;
+                        margin-top: 6rem;
+                    }
+                    &__item {
+                        width: 100%;
+                        margin-right: 0;
+                        margin-bottom: 6rem;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                    &__pic {
+                        img {
+                            height: 21.6rem;
+                            border-radius: .5rem;
+                        }
+                    }
+                    &__content {
+                        padding: 10.9rem 2.6rem 5.9rem;
+                        border-radius: 1rem;
+                        margin-top: -8.2rem;
+                        .title {
+                            font-size: 2.2rem;
+                            margin-bottom: 1.6rem;
+                        }
+                        .description {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+            &__why {
+                .why {
+                    align-items: unset;
+                    flex-direction: column;
+                    gap: 5rem;
+                    &__subtitle {
+                        font-size: 1.6rem;
+                        margin-bottom: 3rem;
+                    }
+                    &__title {
+                        font-size: 4.2rem;
+                        margin-bottom: 3rem;
+                    }
+                    &__item {
+                        width: 100%;
+                        margin-bottom: 2.6rem;
+                        img {
+                            max-width: 5.6rem;
+                            margin-right: 2.4rem;
+                        }
+                        p {
+                            font-size: 1.6rem;
+                        }
+                    }
+                    &__videos {
+                        padding-right: 5.8rem;
+                    }
+                    &__box {
+                        margin-left: -1.4rem;
+                    }
+                    &__video {
+                        width: 100%;
+                        border-radius: 1.5rem;
+                        height: 30rem;
+                    }
+                }
+            }
+            &__how {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+                .how {
+                    background-image: unset;
+                    flex-direction: column;
+                    gap: 2.4rem;
+                    &__name {
+                        font-size: 1.6rem;
+                        margin-bottom: 2rem;
+                    }
+                    &__title {
+                        text-align: left;
+                        @include flexStart();
+                        font-size: 3.4rem;
+                        img {
+                            width: 5rem;
+                        }
+                    }
+                    &__item {
+                        width: 50%;
+                        &-pic {
+                            width: 15rem;
+                            height: 15rem;
+                            margin: 0 auto;
+                            margin-bottom: 1rem;
+                            span {
+                                width: 2.4rem;
+                                height: 2.4rem;
+                                font-size: .8rem;
+                                top: -1.1rem;
+                            }
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        &-content {
+                            h2 {
+                                font-size: 1.6rem;
+                            }
+                            p {
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+            &__calc {
+                padding-top: 10rem;
+                padding-bottom: 1rem;
+                .calc {
+                    padding: 0;
+                    &__row {
+                        flex-direction: column;
+                        gap: 2rem;
+                    }
+                    &__subtitle {
+                        font-size: 1.6rem;
+                    }
+                    &__title {
+                        font-size: 3.4rem;
+                        margin-top: 0;
+                        margin-bottom: 3.6rem;
+                        img {
+                            max-width: 6rem;
+                        }
+                    }
+                    &__form {
+                        label {
+                            border-radius: .4rem;
+                            padding: 2.8rem 2rem;
+                            span {
+                                font-size: 2rem;
+                                margin-right: 4rem;
+                            }
+                            input {
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+                    &__button {
+                        max-width: 100%;
+                        font-size: 1.8rem;
+                        padding: 1.4rem;
+                        border-radius: .5rem;
+                        margin-top: 4rem;
+                    }
+                }
+            }
+            &__result {
+                padding-top: 10rem;
+                padding-bottom: 4rem;
+                .result {
+                    &__top {
+                        flex-direction: column;
+                        margin-bottom: 2rem;
+                    }
+                    &__left {
+                        max-width: 100%;
+                        margin-bottom: 5.6rem;
+                    }
+                    &__subtitle {
+                        font-size: 1.6rem;
+                        margin-bottom: 2rem;
+                    }
+                    &__title {
+                        font-size: 3.4rem;
+                        img {
+                            max-width: 5rem;
+                        }
+                    }
+                    &__type {
+                        @include flexStart();
+                        max-width: 100%;
+                        overflow-x: auto;
+                        gap: 3rem;
+                        padding-bottom: 2rem;
+                        span {
+                            padding: 1rem 2.6rem;
+                            border-radius: .5rem;
+                            font-size: 1.8rem;
+                        }
+                    }
+                    &__box {
+                        img {
+                            height: 25rem;
+                        }
+                    }
+                }
+            }
+            &__comment {
+                padding-top: 6.8rem;
+                padding-bottom: 8.3rem;
+                .comment {
+                    flex-direction: column-reverse;
+                    &__pics {
+                        margin-left: 0;
+                        .pics {
+                            &__one {
+                                img {
+                                    height: 31rem;
+                                    border-radius: 1.5rem;
+                                }
+                                &:before {
+                                    width: 8.9rem;
+                                    height: 8rem;
+                                    border-radius: 1rem;
+                                    left: -1rem;
+                                    top: -1rem;
+                                }
+                            }
+                            &__two {
+                                right: 0;
+                                bottom: -5rem;
+                                img {
+                                    height: 10rem;
+                                    border-radius: 2rem;
+                                }
+                                &:before {
+                                    width: 9rem;
+                                    height: 8.3rem;
+                                    left: -1.3rem;
+                                    top: -1rem;
+                                }
+                            }
+                        }
+                    }
+                    &__container {
+                        max-width: 100%;
+                        margin-bottom: 10rem;
+                    }
+                    &__subtitle {
+                        font-size: 1.4rem;
+                        margin-bottom: 2rem;
+                    }
+                    &__title {
+                        font-size: 3.4rem;
+                        margin-bottom: 3.4rem;
+                        max-width: 100%;
+                        img {
+                            max-width: 5.6rem;
+                        }
+                    }
+                    &__item {
+                        padding: 2.4rem 2rem;
+                        .commas {
+                            max-width: 4rem;
+                            margin-bottom: 1.1rem;
+                        }
+                        svg {
+                            margin-bottom: 1.4rem;
+                        }
+                    }
+                    &__txt {
+                        font-size: 1.6rem;
+                        line-height: 150%;
+                        margin-bottom: 2rem;
+                    }
+                    &__person {
+                        margin-bottom: -10rem;
+                        img {
+                            width: 7rem;
+                            height: 7rem;
+                            margin-bottom: 1rem;
+                        }
+                    }
+                    &__name {
+                        font-size: 1.6rem;
+                        margin-bottom: .4rem;
+                    }
+                    &__post {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+            &__faq {
+                .faq {
+                    flex-direction: column-reverse;
+                    gap: 6rem;
+                    &__subtitle {
+                        font-size: 1.6rem;
+                        margin-bottom: 2rem;
+                    }
+                    &__title {
+                        font-size: 3.4rem;
+                        margin-bottom: 2rem;
+                    }
+                    &__item {
+                        padding: 1.4rem;
+                        border-radius: 1.6rem;
+                        margin-bottom: 2rem;
+                    }
+                    &__content {
+                        margin-top: 2rem;
+                        font-size: 1.8rem;
+                    }
+                    &__names {
+                        font-size: 2rem;
+                    }
+                    .gallery {
+                        max-width: 100%;
+                        &__item {
+                            height: 17rem;
+                            border-radius: 2rem;
+                            margin-bottom: 2rem;
+                            &:nth-child(3n) {
+                                height: 17rem;
+                            }
+                        }
+                    }
+                }
+            }
+            &__banner {
+                padding-top: 56rem;
+                padding-bottom: 6rem;
+                .banner {
+                    &__title {
+                        max-width: 100%;
+                        font-size: 4.3rem;
+                    }
+                }
+            }
+            &__response {
+                .response {
+                    .comment {
+                        flex-direction: column-reverse;
+                        &__item {
+                            width: 100%;
+                            margin-right: 0;
+                            margin-bottom: 10rem;
+                            padding: 2.4rem 2rem;
+                            .commas {
+                                max-width: 4rem;
+                                margin-bottom: 1.1rem;
+                            }
+                            svg {
+                                margin-bottom: 1.4rem;
+                            }
+                        }
+                        &__txt {
+                            font-size: 1.6rem;
+                            line-height: 150%;
+                            margin-bottom: 2rem;
+                        }
+                        &__person {
+                            margin-bottom: -10rem;
+                            img {
+                                width: 7rem;
+                                height: 7rem;
+                                margin-bottom: 1rem;
+                            }
+                        }
+                        &__name {
+                            font-size: 1.6rem;
+                            margin-bottom: .4rem;
+                        }
+                        &__post {
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+            &__method {
+                padding-top: 10rem;
+                padding-bottom: 2.35rem;
+                .method {
+                    flex-wrap: wrap;
+                    &__item {
+                        width: 48%;
+                        margin-bottom: 3rem;
+                    }
+                    &__row {
+                        margin-bottom: 1.3rem;
+                        img {
+                            max-width: 4.8rem;
+                        }
+                    }
+                    &__title {
+                        font-size: 1.4rem;
+                    }
+                    &__subtitle {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            &__tech {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+                .tech {
+                    flex-direction: column;
+                    gap: 3rem;
+                    margin-top: 4rem;
+                    &__title {
+                        max-width: 100%;
+                        font-size: 4.3rem;
+                    }
+                    &__pic {
+                        padding: 2.1rem;
+                        img {
+                            width: 20.5rem;
+                            height: 20.5rem;
+                        }
+                    }
+                    &__name {
+                        font-size: 3rem;
+                    }
+                }
+            }
+            &__types {
+                padding-top: 7.6rem;
+                padding-bottom: 2.5rem;
+                .types {
+                    flex-direction: column;
+                    gap: 3rem;
+                    &__pic {
+                        margin-bottom: 2rem;
+                        img {
+                            width: 26.4rem;
+                            height: 26.4rem;
+                        }
+                    }
+                    &__top {
+                        max-width: 100%;
+                    }
+                    &__title {
+                        font-size: 4.3rem;
+                        span {
+                            font-size: 1.4rem;
+                        }
+                    }
+                    &__subtitle {
+                        font-size: 1.6rem;
+                        margin-top: 2.4rem;
+                    }
+                    &__name {
+                        font-size: 1.4rem;
+                    }
+                    &__content {
+                        &-txt {
+                            font-size: 1.4rem;
+                        }
+                        &-description {
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+            &__review {
+                .review {
+                    flex-direction: column;
+                    &__top {
+                        span {
+                            display: block;
+                            font-size: 1.6rem;
+                            margin-bottom: 3rem;
+                        }
+                        h2 {
+                            font-size: 3.4rem;
+                        }
+                    }
+                    &__column {
+                        width: 100%;
+                    }
+                    &__box {
+                        height: 21rem;
+                        border-radius: 1.5rem;
+                        a {
+                            width: 5rem;
+                            height: 5rem;
+                        }
+                    }
+                    &__name {
+                        font-size: 1.6rem;
+                    }
+                    &__subtitle {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 500.98px) {
+  .desc {
+    &-off {
+      display: none;
+    }
+  }
+}
+@media (max-width: 500.98px) {
+  :root {
+    font-size: 10px;
+  }
+}
+@media (max-width: 325.98px) {
+  :root {
+    font-size: 9px;
+  }
+}
+
