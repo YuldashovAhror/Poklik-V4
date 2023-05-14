@@ -26,10 +26,10 @@
                 <li>
                     <a href="/dashboard">
                         <i class="uil-star"></i>
-                        <span>Test</span>
+                        <span>Dashboard</span>
                     </a>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="uil-star"></i>
                         <span>Dropdown</span>
@@ -44,6 +44,12 @@
                         <li><a href="ecommerce-shops.html">Shops</a></li>
                         <li><a href="ecommerce-add-product.html">Add Product</a></li>
                     </ul>
+                </li> --}}
+                <li>
+                    <a href="{{route('words.index')}}">
+                        <i class="uil-star"></i>
+                        <span>Словарь</span>
+                    </a>
                 </li>
             </ul>
         </div>

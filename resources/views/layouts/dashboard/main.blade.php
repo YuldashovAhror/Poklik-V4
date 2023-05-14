@@ -4,6 +4,7 @@
     <meta charset="utf-8"/>
     <title>Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @livewireStyles
     @include('components.dashboard.styles')
     @yield('styles')
 </head>
@@ -20,7 +21,7 @@
         @include('components.dashboard.footer')
     </div>
 </div>
-
+@livewireScripts
 @include('components.dashboard.scripts')
 @yield('scripts')
 </body>

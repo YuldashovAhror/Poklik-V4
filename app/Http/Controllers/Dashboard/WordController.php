@@ -8,6 +8,6 @@ class WordController extends Controller
 {
     public function index()
     {
-        dd('asd');
+        return view('dashboard.word');
     }
 }
