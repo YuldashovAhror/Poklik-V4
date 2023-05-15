@@ -171,13 +171,14 @@
                 </h2>
                 <!-- /.feedback__title -->
                 <form action="" class="feedback__form">
-                    <input type="text" placeholder="Имя  " class="general-GR" data-aos="fade-right"
+                    <input type="text" placeholder="{{__('asd.Имя')}}" id="first_name" class="general-GR" data-aos="fade-right"
                         data-aos-delay="150">
-                    <input name="phone" type="tel" class="form__tel general-GR" required
-                        placeholder="Номер телефона" pattern="^[0-9-+\s()]*$" data-aos="fade-right"
+                    <input name="phone" type="tel" id="phone" class="form__tel general-GR" required
+                        placeholder="{{__('asd.Номер телефона')}}" pattern="^[0-9-+\s()]*$" data-aos="fade-right"
                         data-aos-delay="200">
-                    <button type="submit" class="general-GM" data-aos="fade-right" data-aos-delay="250">
-                        Отправить
+                    <input id="token" value="{{ csrf_token() }}" type="hidden" required>
+                    <button id="button" onclick="send1()" type="button" class="general-GM" data-aos="fade-right" data-aos-delay="250">
+                        {{__('asd.Отправить')}}
                     </button>
                 </form>
                 <!-- /.feedback__form -->
@@ -501,17 +502,18 @@
                         <div class="calc__row">
                             <label for="calc__length" data-aos="fade-right">
                                 <span class="general-GR">{{__('asd.Длина, м')}}</span>
-                                <input type="number" class="general-GR" id="calc__length" placeholder="0">
+                                <input type="number" id="width" class="general-GR" id="calc__length"  name="width" placeholder="0">
                             </label>
                             <label for="calc__width" data-aos="fade-left" data-aos-delay="150">
                                 <span class="general-GR">{{__('asd.Ширина, м')}}</span>
-                                <input type="number" class="general-GR" id="calc__width" placeholder="0">
+                                <input type="number" name="height" id="height" class="general-GR" id="calc__width" placeholder="0">
+                                <input id="token" value="{{ csrf_token() }}" type="hidden" required>
                             </label>
                         </div>
                         <!-- /.calc__row -->
                         <label for="calc__type" data-aos="fade-up" data-aos-delay="200">
                             <span class="general-GR">{{__('asd.тип ковра:')}}</span>
-                            <select name="" id="calc__type">
+                            <select id="type" name="type"  id="calc__type">
                                 @foreach ($types as $type)
                                     <option value="{{ $type->id }}">{{ $type['name_' . $lang] }}</option>
                                 @endforeach
@@ -519,8 +521,9 @@
                             <!-- /# -->
                         </label>
                         <span class="calc__button popup__btn" data-aos="fade-up">{{__('asd.Оставить заявку')}}</span>
+                        {{-- <button id="button" onclick="send2()" type="button" class="calc__button " data-aos="fade-up">{{__('asd.Отправить заявку')}}</button> --}}
                         <!-- /.calc__button -->
-                    </form>
+                    </form >
                     <!-- /.calc__form -->
                 </div>
                 <!-- /.calc -->
@@ -584,7 +587,7 @@
                         @foreach ($videos as $video)
                             
                         <div class="review__video review__box">
-                            <img src="{{$video->video}}" />
+                            <img src="{{$video->photo}}" />
                             <a href="{{$video->video}}" data-fancybox="gallery">
                                 <svg width="21" height="24" viewBox="0 0 21 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -814,7 +817,65 @@
 @endsection
 
 @section('script')
-    <script src="/js/swiper.min.js"></script>
+
+<script>
+    function send1() {
+
+        let token = $("#token").val();
+        let name = $('#first_name').val();
+        let phone = $('#phone').val();
+        $.ajax({
+            token: token,
+            type: "get",
+            url: "/feedback",
+            data: {
+                name: name,
+                phone: phone,
+            },
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+        });
+        // setTimeout(() => {
+        //     $('.popup').hide()
+        //     $('.popup__success').show()
+        //     $("#first_name").val('');
+        //     $("#phone").val('');
+        // }, 1000)
+        // setTimeout(() => {
+        //     $('.popup').show()
+        //     $('.popup__success').hide()
+        //     $('.feedback').hide()
+        // }, 3000)
+    }
+</script>
+
+<script>
+    function send2() {
+        let token = $("#token").val();
+        let name = $('#first_name1').val();
+        let phone = $('#phone1').val();
+        let width = $('#width').val();
+        let height = $('#height').val();
+        let type = $('#type').val();
+        $.ajax({
+            token: token,
+            type: "get",
+            url: "/feedback",
+            data: {
+                name: name,
+                phone: phone,
+                width: width,
+                height: height,
+                type: type,
+            },
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+        });
+    }
+</script>
+
+
+<script src="/js/swiper.min.js"></script>
     <script src="/js/BeerSlider.js"></script>
     <script src="/js/jquery.custom-select.js"></script>
     <script src="/js/fancybox.umd.js"></script>
@@ -893,5 +954,5 @@
                 audioReview.pause();
             }
         });
-    </script>
+    </script>  
 @endsection

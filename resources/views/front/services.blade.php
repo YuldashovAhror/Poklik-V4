@@ -251,12 +251,13 @@
                 </h2>
                 <!-- /.feedback__title -->
                 <form action="" class="feedback__form">
-                    <input type="text" placeholder="Имя  " class="general-GR" data-aos="fade-right"
+                    <input type="text" placeholder="Имя " id="first_name" class="general-GR" data-aos="fade-right"
                         data-aos-delay="150">
-                    <input name="phone" type="tel" class="form__tel general-GR" required
+                    <input name="phone" type="tel" id="phone" class="form__tel general-GR" required
                         placeholder="Номер телефона" pattern="^[0-9-+\s()]*$" data-aos="fade-right"
                         data-aos-delay="200">
-                    <button type="submit" class="general-GM" data-aos="fade-right" data-aos-delay="250">
+                        <input id="token" value="{{ csrf_token() }}" type="hidden" required>
+                    <button id="button" onclick="send1()" type="button" class="general-GM" data-aos="fade-right" data-aos-delay="250">
                         {{__('asd.Отправить')}}
                     </button>
                 </form>
@@ -397,6 +398,35 @@
 @endsection
 
 @section('script')
+<script>
+    function send1() {
+        let token = $("#token").val();
+        let name = $('#first_name').val();
+        let phone = $('#phone').val();
+        $.ajax({
+            token: token,
+            type: "get",
+            url: "/feedback",
+            data: {
+                name: name,
+                phone: phone,
+            },
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+        });
+        // setTimeout(() => {
+        //     $('.popup').hide()
+        //     $('.popup__success').show()
+        //     $("#first_name").val('');
+        //     $("#phone").val('');
+        // }, 1000)
+        // setTimeout(() => {
+        //     $('.popup').show()
+        //     $('.popup__success').hide()
+        //     $('.feedback').hide()
+        // }, 3000)
+    }
+</script>
     <script src="/js/swiper.min.js"></script>
     <script src="/js/BeerSlider.js"></script>
     <script src="/js/jquery.custom-select.js"></script>

@@ -76,6 +76,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{route('feedback.index')}}">
+                        <i class="uil-star"></i>
+                        <span>Обратная связь</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{route('words.index')}}">
                         <i class="uil-star"></i>
                         <span>Словарь</span>

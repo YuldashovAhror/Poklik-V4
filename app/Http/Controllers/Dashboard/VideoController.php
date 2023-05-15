@@ -46,8 +46,10 @@ class VideoController extends BaseController
             $img_name = Str::random(10).'.'.$request->file('video')->getClientOriginalExtension();
             $request->file('video')->move(public_path('/image/video'), $img_name);
             $video->video = '/image/video/'.$img_name;
+        }        
+        if($request->file('photo')){
+            $video['photo'] = $this->photoSave($request->file('photo'), 'image/video');
         }
-        $this->thumbnail = $this->saveThumbnail($video->video, 2, '/image/thumbnail');
         $video->save();
         return redirect()->route('video.index');
     }
@@ -93,6 +95,13 @@ class VideoController extends BaseController
             $request->file('video')->move(public_path('/image/video'), $img_name);
             $video->video = '/image/video/'.$img_name;
         }
+        if($request->file('photo')){
+            if(is_file(public_path($video->photo))){
+                unlink(public_path($video->photo));
+            }
+            $video['photo'] = $this->photoSave($request->file('photo'), 'image/video');
+            
+        }
         $video->save();
         return redirect()->route('video.index');
     }
@@ -108,6 +117,9 @@ class VideoController extends BaseController
         $video = Video::find($id);
         if(is_file(public_path($video->video))){
             unlink(public_path($video->video));
+        }
+        if(is_file(public_path($video->photo))){
+            unlink(public_path($video->photo));
         }
         $video->delete();
         return back();

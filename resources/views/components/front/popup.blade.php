@@ -16,18 +16,18 @@
     </span>
     {{-- =========POPUP FEEDBACK========= --}}
     <div class="popup__container" style="display: ">
-        <h2 class="popup__title general-lackR">{{__('asd.Biz sizga qo\'ng\'iroq qilamiz')}}</h2>
+        <h2 class="popup__title general-lackR">{{__("asd.Biz sizga qo'ng'iroq qilamiz")}}</h2>
         <!-- /.popup__title general-lackR -->
-        <p class="popup__txt general-R">{{__("asd.E\'tibor bering, savdo bo\'limining ish vaqti 9:00 dan 21:00 gacha")}}</p>
+        <p class="popup__txt general-R">{{__("asd.E'tibor bering, savdo bo'limining ish vaqti 9:00 dan 21:00 gacha")}}</p>
         <!-- /.popup__txt -->
         <form action="" class="popup__form">
-            <input type="text" placeholder="Ism ">
-            <input type="text" name="phone" type="tel" class="form__tel" required placeholder="Telefon raqam"
+            <input type="text" placeholder="Ism" id="first_name1">
+            <input type="text" id="phone1" type="tel" class="form__tel" required placeholder="Telefon raqam"
                 pattern="^[0-9-+\s()]*$">
 
-            <p class="popup__txt general-R">{{__("asd.E\'tibor bering, savdo bo\'limining ish vaqti 9:00 dan 21:00 gacha")}}</p>
+            <p class="popup__txt general-R">{{__("asd.E'tibor bering, savdo bo'limining ish vaqti 9:00 dan 21:00 gacha")}}</p>
             <!-- /.popup__txt -->
-            <button type="submit" class="general-M">{{__('asd.Buyurtma')}} </button>
+            <button id="button" onclick="send2()" type="button" class="general-M">{{__('asd.Buyurtma')}} </button>
         </form>
         <!-- /.popup__form -->
     </div>

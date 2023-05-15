@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Feedback;
 use Illuminate\Http\Request;
 
 class FeedbackController extends Controller
@@ -14,7 +15,10 @@ class FeedbackController extends Controller
      */
     public function index()
     {
-        //
+        $feedbacks = Feedback::with('types')->orderBy('id', 'desc')->get();
+        return view('dashboard.feedback.index', [
+            'feedbacks'=>$feedbacks
+        ]);
     }
 
     /**
@@ -80,6 +84,8 @@ class FeedbackController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $fedback = Feedback::find($id);
+        $fedback->delete();
+        return back();
     }
 }

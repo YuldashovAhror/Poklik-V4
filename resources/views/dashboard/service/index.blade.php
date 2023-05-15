@@ -15,7 +15,6 @@
                             <th scope="col">Основной Фото</th>
                             <th scope="col">Второй Фото</th>
                             <th scope="col">Заголовок</th>
-                            <th scope="col">Описание</th>
                             <th scope="col">Позиция</th>
                             <th scope="col" class="text-center">Действия</th>
                         </tr>
@@ -30,7 +29,6 @@
                                 <td><img src="{{ $service->second_photo }}" alt="" style="height: 100px; width: 200px"></td>
                                 <td>{{ $service->name_ru }}</td>
                                 <td>{{ $service->title_ru }}</td>
-                                <td>{!! $service->discription_ru !!}</td>
                                 <td class="text-center">
                                     <a href="{{ route('service.edit', $service) }}">
                                         <button class="btn btn-xs btn-success">

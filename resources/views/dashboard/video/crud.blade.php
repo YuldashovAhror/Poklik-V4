@@ -11,13 +11,22 @@
                     @csrf
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-6">
                                 <div class="mb-3">
-                                    <label class="form-label" for="exampleFormControlInput1">видео </label>
+                                    <label class="form-label" for="exampleFormControlInput1">Видео </label>
                                     <div class="col-12 text-center">
                                         <i data-feather="loader" style="height: 100px; width: 100px"></i>
                                     </div>
                                     <input class="form-control" id="exampleFormControlInput1" type="file" required name="video">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label class="form-label" for="exampleFormControlInput1">Фото </label>
+                                    <div class="col-12 text-center">
+                                        <i data-feather="loader" style="height: 100px; width: 100px"></i>
+                                    </div>
+                                    <input class="form-control" id="exampleFormControlInput1" type="file" required name="photo">
                                 </div>
                             </div>
                         </div>
@@ -52,7 +61,7 @@
                         @foreach($videos as $key=>$video)
                             <tr>
                                 <th scope="row">{{ ++$key }}</th>
-                                <td><img src="{{ $video->video }}" alt="" style="height: 100px; width: 100px"></td>
+                                <td><img src="{{ $video->photo }}" alt="" style="height: 100px; width: 100px"></td>
                                 <td class="text-center">
                                     <button class="btn btn-xs btn-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalCenter{{ $video->id }}Edit"><i class="bx bx-pencil"></i></button>
                                     <div class="modal fade" id="exampleModalCenter{{ $video->id }}Edit" tabindex="-1" aria-labelledby="exampleModalCenter" aria-hidden="true">
@@ -67,16 +76,26 @@
                                                         {{ method_field('put') }}
                                                         <div class="card-body">
                                                             <div class="row">
-                                                                <div class="col-12">
+                                                                <div class="col-6">
+                                                                    <div class="mb-3">
+                                                                        <label class="form-label" for="exampleFormControlInput1">видео
+
+                                                                        </label>
+                                                                        <div class="col-12 text-center">
+                                                                            <img style="height: 100px; width: 100px" src="{{ $video->video }}">
+                                                                        </div>
+                                                                        <input class="form-control mt-1" id="exampleFormControlInput1" type="file" name="video">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
                                                                     <div class="mb-3">
                                                                         <label class="form-label" for="exampleFormControlInput1">Фото
 
                                                                         </label>
                                                                         <div class="col-12 text-center">
-
-                                                                            <img style="height: 100px; width: 100px" src="{{ $video->video }}">
+                                                                            <img style="height: 100px; width: 100px" src="{{ $video->photo }}">
                                                                         </div>
-                                                                        <input class="form-control mt-1" id="exampleFormControlInput1" type="file" name="video">
+                                                                        <input class="form-control mt-1" id="exampleFormControlInput1" type="file" name="photo">
                                                                     </div>
                                                                 </div>
                                                             </div>

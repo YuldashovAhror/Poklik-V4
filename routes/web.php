@@ -10,6 +10,7 @@ use App\Http\Controllers\Dashboard\VideoController;
 use App\Http\Controllers\Dashboard\VoiceController;
 use App\Http\Controllers\Dashboard\WordController;
 use App\Http\Controllers\Front\CommentController;
+use App\Http\Controllers\Front\FeedbackController as FrontFeedbackController;
 use App\Http\Controllers\Front\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,7 +34,8 @@ Route::get('/languages/{loc}', function ($loc) {
 
 Route::get('/', [WelcomeController::class, 'index']);
 Route::get('/comment', [CommentController::class, 'index']);
-Route::get('service/{id},', [WelcomeController::class, 'show'])->name('front.service.show');
+Route::get('/service/{id},', [WelcomeController::class, 'show'])->name('front.service.show');
+Route::get('/feedback', [FrontFeedbackController::class, 'store'])->name('front.feedback.store');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
