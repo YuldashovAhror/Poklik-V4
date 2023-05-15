@@ -5,7 +5,7 @@
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-header pb-0">
-                    <h5>Добавить партнера</h5>
+                    <h5>Добавить Услуга</h5>
                 </div>
                 <form action="{{ route('service.store') }}" method="post" enctype="multipart/form-data">
                     @csrf

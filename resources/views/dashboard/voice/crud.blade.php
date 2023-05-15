@@ -5,7 +5,7 @@
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-header pb-0">
-                    <h5>Добавить категорию</h5>
+                    <h5>Добавить Голос</h5>
                 </div>
                 <form action="{{ route('voice.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
@@ -75,7 +75,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-md-10">
-                            <h5>Все категории</h5>
+                            <h5>Все голос</h5>
                         </div>
                     </div>
                 </div>

@@ -5,7 +5,7 @@
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-header">
-                    <h5>Все новости</h5>
+                    <h5>Все Услуга</h5>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-hover">
