@@ -54,21 +54,25 @@
                 <div class="languages">
                     <a href="" class="languages__lang languages__active general-GR">
                         <img src="/img/icons/ru.svg" alt="">
-                        <span>Русский</span>
+                        <span>@if($lang == 'uz') Uzbekcha @elseif($lang == 'ru') Русский @elseif($lang == 'en') English<a href="/languages/ru" >Русский</a>@endif</span>
                         <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11 1L6 6L1 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </a>
                     <!-- /.languages__lang languages__active -->
-                    <div class="languages__list">
-                        <a href="" class="languages__lang general-GR">
+                    <div class="languages__list" style="opacity: 1; visibility: visible">
+                        @if($lang != 'ru')<a href="/languages/ru" class="languages__lang general-GR">
                             <img src="/img/icons/ru.svg" alt="">
                             <span>Русский</span>
-                        </a>
-                        <a href="" class="languages__lang general-GR">
+                        </a>@endif
+                        @if($lang != 'uz')<a href="/languages/uz" class="languages__lang general-GR">
                             <img src="/img/icons/ru.svg" alt="">
-                            <span>Русский</span>
-                        </a>
+                            <span>Uzbekcha</span>
+                        </a>@endif
+                        @if($lang != 'en')<a href="/languages/en" class="languages__lang general-GR">
+                            <img src="/img/icons/ru.svg" alt="">
+                            <span>English</span>
+                        </a>@endif
                     </div>
                     <!-- /.languages__list -->
                 </div>
@@ -97,7 +101,7 @@
                 <a href="tel:" class="header__call">
                     <img src="/img/icons/tel.png" alt="">
                     <p class="general-M">
-                        Telefon qilish
+                        {{__('asd.Telefon qilish')}}
                         <span class="general-R">+ 998 90 123 45 67</span>
                         <!-- /.general-R -->
                     </p>
@@ -114,18 +118,18 @@
         <div class="general__container">
             <div class="header__nav">
                 <div class="links">
-                    <a href="/#section__about" class="general-GR">О компании</a>
+                    <a href="/#section__about" class="general-GR">{{__('asd.О компании')}}</a>
                     <!-- /.general-M -->
-                    <a href="/#section__services" class="general-GR">Услуги</a>
+                    <a href="/#section__services" class="general-GR">{{__('asd.Услуги')}}</a>
                     <!-- /.general-M -->
-                    <a href="/#section__how" class="general-GR">Этапы работы</a>
-                    <a href="/#section__result" class="general-GR">Результаты работ</a>
-                    <a href="/#section__review" class="general-GR">Отзывы</a>
-                    <a href="/#section__faq" class="general-GR">Вопрос/Ответ</a>
+                    <a href="/#section__how" class="general-GR">{{__('asd.Этапы работы')}}</a>
+                    <a href="/#section__result" class="general-GR">{{__('asd.Результаты работ')}}</a>
+                    <a href="/#section__review" class="general-GR">{{__('asd.Отзывы')}}</a>
+                    <a href="/#section__faq" class="general-GR">{{__('asd.Вопрос/Ответ')}}</a>
                     <!-- /.general-M -->
                 </div>
                 <!-- /.links -->
-                <a href="#footer" class="header__btn general-GR">Контакты</a>
+                <a href="#footer" class="header__btn general-GR">{{__('asd.Контакты')}}</a>
                 <!-- /.header__btn -->
             </div>
             <!-- /.header__nav -->
@@ -137,14 +141,14 @@
 
 <div class="menu">
     <div class="menu__container">
-        <a href="#section__about" class="general-GR">О компании</a>
+        <a href="#section__about" class="general-GR">{{__('asd.О компании')}}</a>
         <!-- /.general-M -->
-        <a href="/services" class="general-GR">Услуги</a>
+        <a href="/services" class="general-GR">{{__('asd.Услуги')}}</a>
         <!-- /.general-M -->
-        <a href="#section__how" class="general-GR">Этапы работы</a>
-        <a href="#section__result" class="general-GR">Результаты работ</a>
-        <a href="#section__review" class="general-GR">Отзывы</a>
-        <a href="#section__faq" class="general-GR">Вопрос/Ответ</a>
+        <a href="#section__how" class="general-GR">{{__('asd.Этапы работы')}}</a>
+        <a href="#section__result" class="general-GR">{{__('asd.Результаты работ')}}</a>
+        <a href="#section__review" class="general-GR">{{__('asd.Отзывы')}}</a>
+        <a href="#section__faq" class="general-GR">{{__('asd.Вопрос/Ответ')}}</a>
     </div>
     <!-- /.menu__container -->
     <div class="messengers">

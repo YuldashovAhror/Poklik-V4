@@ -84,7 +84,7 @@
                         <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Фото</th>
+                            <th scope="col">голос</th>
                             <th scope="col">Название</th>
                             <th scope="col" class="text-center">Действия</th>
                         </tr>
@@ -93,7 +93,10 @@
                         @foreach($voices as $key=>$voice)
                             <tr>
                                 <th scope="row">{{ ++$key }}</th>
-                                <td><img src="{{ $voice->voice }}" alt="" style="height: 100px; width: 100px"></td>
+                                <td><audio id="my-audio" class="my__audio">
+                                    <source src="{{ $voice->voice }}" type="audio/mpeg">
+                                </audio></td>
+                                {{-- <td><source src="{{ $voice->voice }}" alt="" style="height: 100px; width: 100px"></td> --}}
                                 <td>{{ $voice->name_ru }}</td>
                                 <td class="text-center">
                                     <button class="btn btn-xs btn-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalCenter{{ $voice->id }}Edit"><i class="bx bx-pencil"></i></button>

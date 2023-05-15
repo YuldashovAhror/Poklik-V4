@@ -47,6 +47,7 @@ class VideoController extends BaseController
             $request->file('video')->move(public_path('/image/video'), $img_name);
             $video->video = '/image/video/'.$img_name;
         }
+        $this->thumbnail = $this->saveThumbnail($video->video, 2, '/image/thumbnail');
         $video->save();
         return redirect()->route('video.index');
     }

@@ -45,4 +45,39 @@ trait FileTrait
         }
         return back();
     }
+    
+    public function saveThumbnail($video, $sec, $directory)
+    {
+        if (file_exists(public_path($directory))){
+            $video = public_path($video);
+            $file_name = Str::random(10) . '.png';
+            $thumbnail_png = public_path($directory . '/' . $file_name);
+
+            $ffmpeg = FFMpeg::create([
+                'ffmpeg.binaries'  => base_path() . '/ffmpeg/ffmpeg.exe',
+                'ffprobe.binaries' => base_path() . '/ffmpeg/ffprobe.exe'
+            ]);
+
+            $movie = $ffmpeg->open($video);
+            $frame = $movie->frame(TimeCode::fromSeconds($sec));
+            $frame->save($thumbnail_png);
+        }else{
+            mkdir(public_path($directory), 0700, true);
+            $video = public_path($video);
+            $file_name = Str::random(10) . '.png';
+            $thumbnail_png = public_path($directory . '/' . $file_name);
+
+            $ffmpeg = FFMpeg::create([
+                'ffmpeg.binaries'  => base_path() . '/ffmpeg/ffmpeg.exe',
+                'ffprobe.binaries' => base_path() . '/ffmpeg/ffprobe.exe'
+            ]);
+
+            $movie = $ffmpeg->open($video);
+            $frame = $movie->frame(TimeCode::fromSeconds($sec));
+            $frame->save($thumbnail_png);
+        }
+        $thumbnail_webp = $this->savePhoto(public_path('/' . $directory . '/' . $file_name), $directory);
+        $this->deletePhoto(null, null,'/' . $directory . '/' . $file_name);
+        return $thumbnail_webp;
+    }
 }

@@ -48,22 +48,22 @@
             </div>
             <!-- /.footer__column -->
             <div class="footer__column">
-                <span class="footer__column-txt general-GR">(телефоны)</span>
+                <span class="footer__column-txt general-GR">({{__('asd.телефоны')}})</span>
                 <!-- /.footer__column-txt -->
                 <a href="tel:" class="footer__column-content general-GR">97 777 97 77</a>
                 <!-- /.footer__column-content -->
             </div>
             <!-- /.footer__column -->
             <div class="footer__column">
-                <span class="footer__column-txt general-GR">(адрес)</span>
+                <span class="footer__column-txt general-GR">({{__('asd.адрес')}})</span>
                 <!-- /.footer__column-txt -->
 
-                <p class="footer__column-content general-GR">86C9+MFQ, 40 Mannon Uygur Street, Tashkent, Uzbekistan</p>
+                <p class="footer__column-content general-GR">{{__('asd.86C9+MFQ, 40 Mannon Uygur Street, Tashkent, Uzbekistan')}}</p>
                 <!-- /.footer__column-content -->
             </div>
             <!-- /.footer__column -->
             <div class="footer__column">
-                <span class="footer__column-txt general-GR">(социальные сети)</span>
+                <span class="footer__column-txt general-GR">({{__('asd.социальные сети')}})</span>
                 <!-- /.footer__column-txt -->
                 <div class="messengers">
                     <a href="" class="general-GR">
@@ -103,8 +103,8 @@
         <div class="footer__bottom">
             <p class="general-GR">Poklik ©2023</p>
             <!-- /.general-GR -->
-            <p class="general-GR">All copyrights reserved</p>
-            <p class="general-GR">created by <a href="https://novastudio.uz">NOVAS</a></p>
+            <p class="general-GR">{{__('asd.All copyrights reserved')}}</p>
+            <p class="general-GR">{{__('asd.created by')}} <a href="https://novastudio.uz">NOVAS</a></p>
             <!-- /.general-GR -->
         </div>
         <!-- /.footer__bottom -->
