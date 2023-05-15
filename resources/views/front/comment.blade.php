@@ -65,7 +65,7 @@
             <!-- /.general__container -->
         </section>
         <!-- /.section__banner -->
-        <section class="section__response">
+        {{-- <section class="section__response">
             <div class="general__container">
                 <div class="response">
                     <?php for ($i = 0; $i < 10; $i++):?>
@@ -137,7 +137,117 @@
                 <!-- /.response -->
             </div>
             <!-- /.general__container -->
+        </section> --}}
+        <section id="section__review" class="section__review" style="background-image: unset; background-color: white;">
+            <div class="general__container">
+                <div class="review__top">
+                    <span class="general-GR">Отзывы</span>
+                    <!-- /.general-GR -->
+                    <h2 class="review__title general-GB">Отзывы наших клиентов
+                        <img src="/img/icons/likes.png" alt="">
+                    </h2>
+                    <!-- /.review__title -->
+                </div>
+                <!-- /.review__top -->
+                <div class="review">
+                    <div class="review__column">
+                        <?php for ($i = 1;
+                                   $i <= 3;
+                                   $i++): ?>
+                        <div class="review__video review__box">
+                            <img src="<?php echo '/video/'.$i.'.jpg'; ?>" />
+                            <a href="/video/1.mp4" data-fancybox="gallery">
+                                <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19.5 9.40192C21.5 10.5566 21.5 13.4434 19.5 14.5981L4.5 23.2583C2.5 24.413 7.28468e-07 22.9697 8.29415e-07 20.6603L1.58652e-06 3.33974C1.68747e-06 1.03034 2.5 -0.413031 4.5 0.741669L19.5 9.40192Z"
+                                        fill="#1A5551"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <!-- /.review__video -->
+                        <?php endfor ?>
+                    </div>
+                    <!-- /.review__column -->
+                    <div class="review__column">
+                        <?php for ($i = 1;
+                                   $i <= 3;
+                                   $i++): ?>
+                        <div class="review__audio ">
+                            <div class="audio">
+                                <audio id="my-audio" class="my__audio">
+                                    <source src="/video/audio.mp3" type="audio/mpeg">
+                                    Ваш браузер не поддерживает аудио элемент.
+                                </audio>
+                                <span class="audio__btn">
+                                    <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.5 9.40192C21.5 10.5566 21.5 13.4434 19.5 14.5981L4.5 23.2583C2.5 24.413 7.28468e-07 22.9697 8.29415e-07 20.6603L1.58652e-06 3.33974C1.68747e-06 1.03034 2.5 -0.413031 4.5 0.741669L19.5 9.40192Z" fill="#1A5551"/>
+</svg>
+                                </span>
+                                <!-- /.audio__btn -->
+                                <svg class="audio__lines" width="338" height="46" viewBox="0 0 338 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 7V39" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M13 12L13 34" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M25 10L25 36" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M37 0L37 46" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M49 18L49 28" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M61 12L61 35" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M73 7L73 39" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M85 11L85 35" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M97 6L97 40" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M109 13L109 33" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M121 8L121 38" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M133 13L133 33" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M145 9L145 37" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M157 3L157 43" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M169 7L169 39" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M181 17L181 29" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M193 12L193 35" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M205 7L205 39" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M217 16L217 30" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M229 10L229 36" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M241 16L241 30" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M253 13L253 33" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M265 10L265 36" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M277 6L277 40" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M289 12L289 35" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M301 16L301 30" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M313 12L313 34" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M325 17L325 29" stroke="#1A5551" stroke-width="2"/>
+                                    <path d="M337 22L337 24" stroke="#1A5551" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <!-- /.audio -->
+                            <h3 class="review__name general-GM">Севара Холбаева</h3>
+                            <!-- /.review__name general-GM -->
+                            <p class="review__subtitle general-GM">Домохозяйка</p>
+                            <!-- /.review__subtitle general-GM -->
+                        </div>
+                        <!-- /.review__video -->
+                        <?php endfor ?>
+                    </div>
+                    <!-- /.review__column -->
+                    <div class="review__column">
+                        <?php for ($i = 1;
+                                   $i <= 3;
+                                   $i++): ?>
+                        <div class="review__photo review__box">
+                            <img src="<?php echo '/video/p-'.$i.'.jpg'; ?>" />
+                            <a href="<?php echo '/video/p-'.$i.'.jpg'; ?>" data-fancybox="gallery">
+                                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.39026 15.6211L6.52253 12.4888C6.80426 12.2071 7.13605 12.0662 7.51789 12.0662C7.89973 12.0662 8.23085 12.2071 8.51126 12.4888C8.793 12.7706 8.93387 13.1023 8.93387 13.4842C8.93387 13.866 8.793 14.1972 8.51126 14.4776L5.40386 17.585L7.56661 17.5601C7.96436 17.5601 8.3041 17.701 8.58584 17.9827C8.86758 18.2645 9.00845 18.6042 9.00845 19.0019C9.00845 19.3997 8.86758 19.7394 8.58584 20.0212C8.3041 20.3029 7.96436 20.4438 7.56661 20.4438L1.94843 20.4438C1.55068 20.4438 1.21922 20.3112 0.954058 20.046C0.688893 19.7809 0.55631 19.4494 0.55631 19.0517L0.55631 13.3838C0.55631 12.986 0.697512 12.6546 0.979913 12.3894C1.26231 12.1242 1.60172 11.9916 1.99815 11.9916C2.39589 11.9916 2.73166 12.1285 3.00544 12.4023C3.27922 12.6761 3.41578 13.0115 3.41512 13.4086L3.39026 15.6211ZM3.43998 5.37909L3.43998 7.5667C3.43998 7.96444 3.29911 8.30419 3.01737 8.58593C2.73564 8.86766 2.39589 9.00853 1.99815 9.00853C1.6004 9.00853 1.26066 8.86766 0.978919 8.58592C0.697181 8.30419 0.556311 7.96445 0.556311 7.5667L0.556312 1.94851C0.556312 1.55077 0.688893 1.21931 0.954058 0.954145C1.21922 0.68898 1.55068 0.556396 1.94843 0.556396L7.56661 0.556397C7.96436 0.556397 8.30012 0.693288 8.57391 0.967071C8.84769 1.24085 8.98425 1.57629 8.98359 1.97337C8.98359 2.37112 8.8467 2.70688 8.57291 2.98067C8.29913 3.25445 7.9637 3.39101 7.56661 3.39035L5.379 3.39035L8.53612 6.54747C8.81786 6.82921 8.95873 7.15238 8.95873 7.51698C8.95873 7.88158 8.81786 8.20475 8.53612 8.48649C8.25438 8.76823 7.9269 8.9134 7.55369 8.92202C7.18047 8.93064 6.85332 8.79375 6.57224 8.51135L3.43998 5.37909ZM15.6459 17.585L12.4887 14.4278C12.207 14.1461 12.0661 13.8229 12.0661 13.4583C12.0661 13.0937 12.207 12.7706 12.4887 12.4888C12.7705 12.2071 13.1019 12.0665 13.4831 12.0672C13.8643 12.0679 14.1957 12.2084 14.4775 12.4888L17.56 15.6211V13.4335C17.56 13.0357 17.7009 12.696 17.9826 12.4142C18.2644 12.1325 18.6041 11.9916 19.0019 11.9916C19.3996 11.9916 19.7393 12.1325 20.0211 12.4142C20.3028 12.696 20.4437 13.0357 20.4437 13.4335L20.4437 19.0517C20.4437 19.4494 20.3111 19.7809 20.0459 20.046C19.7808 20.3112 19.4493 20.4438 19.0516 20.4438L13.3837 20.4438C12.9859 20.4438 12.6541 20.3029 12.3883 20.0212C12.1225 19.7394 11.9902 19.3997 11.9916 19.0019C11.9916 18.6042 12.1241 18.2727 12.3893 18.0076C12.6545 17.7424 12.9859 17.6098 13.3837 17.6098L15.6459 17.585ZM15.621 3.39035L13.3837 3.39035C12.9859 3.39035 12.6584 3.25379 12.4012 2.98067C12.144 2.70755 12.0158 2.37178 12.0164 1.97337C12.0164 1.57562 12.1533 1.23986 12.4271 0.966077C12.7009 0.692294 13.0363 0.555734 13.4334 0.556397L19.0516 0.556396C19.4493 0.556396 19.7808 0.68898 20.0459 0.954145C20.3111 1.21931 20.4437 1.55077 20.4437 1.94851L20.4437 7.61642C20.4437 8.01416 20.3111 8.34562 20.0459 8.61079C19.7808 8.87595 19.4493 9.00853 19.0516 9.00853C18.6538 9.00853 18.3181 8.87164 18.0443 8.59786C17.7705 8.32408 17.6339 7.98864 17.6346 7.59156L17.6097 5.37909L14.4775 8.51135C14.1957 8.79309 13.864 8.93396 13.4821 8.93396C13.1003 8.93396 12.7692 8.79309 12.4887 8.51135C12.207 8.22961 12.0661 7.89782 12.0661 7.51598C12.0661 7.13415 12.207 6.80302 12.4887 6.52261L15.621 3.39035Z" fill="#1A5551"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <!-- /.review__video -->
+                        <?php endfor ?>
+                    </div>
+                    <!-- /.review__column -->
+                </div>
+                <!-- /.review -->
+            </div>
+            <!-- /.general__container -->
         </section>
+        <!-- /.section__review -->
         <!-- /.section__response -->
     </div>
     <!-- /.wrapper -->

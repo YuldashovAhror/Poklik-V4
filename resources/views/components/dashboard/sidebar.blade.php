@@ -29,22 +29,46 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
-                {{-- <li>
+                <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="uil-star"></i>
-                        <span>Dropdown</span>
+                        <span>Услуга</span>
                     </a>
                     <ul class="sub-menu mm-collapse" aria-expanded="false">
-                        <li><a href="ecommerce-products.html">Products</a></li>
-                        <li><a href="ecommerce-product-detail.html">Product Detail</a></li>
-                        <li><a href="ecommerce-orders.html">Orders</a></li>
-                        <li><a href="ecommerce-customers.html">Customers</a></li>
-                        <li><a href="ecommerce-cart.html">Cart</a></li>
-                        <li><a href="ecommerce-checkout.html">Checkout</a></li>
-                        <li><a href="ecommerce-shops.html">Shops</a></li>
-                        <li><a href="ecommerce-add-product.html">Add Product</a></li>
+                        <li><a href="{{route('service.index')}}">Список</a></li>
+                        <li><a href="{{route('service.create')}}">Создать</a></li>
                     </ul>
-                </li> --}}
+                </li>
+                <li>
+                    <a href="{{route('category.index')}}">
+                        <i class="uil-star"></i>
+                        <span>Категория</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('video.index')}}">
+                        <i class="uil-star"></i>
+                        <span>Bидео</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('voice.index')}}">
+                        <i class="uil-star"></i>
+                        <span>Голос</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('image.index')}}">
+                        <i class="uil-star"></i>
+                        <span>Изображение</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('gallary.index')}}">
+                        <i class="uil-star"></i>
+                        <span>Галерея</span>
+                    </a>
+                </li>
                 <li>
                     <a href="{{route('words.index')}}">
                         <i class="uil-star"></i>

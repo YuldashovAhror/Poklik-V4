@@ -1,5 +1,12 @@
 <?php
 
+use App\Http\Controllers\Dashboard\CategoryController;
+use App\Http\Controllers\Dashboard\FeedbackController;
+use App\Http\Controllers\Dashboard\GallaryController;
+use App\Http\Controllers\Dashboard\ImageController;
+use App\Http\Controllers\Dashboard\ServiceController;
+use App\Http\Controllers\Dashboard\VideoController;
+use App\Http\Controllers\Dashboard\VoiceController;
 use App\Http\Controllers\Dashboard\WordController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,6 +36,13 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::resource('dashboard/service', ServiceController::class);
+Route::resource('dashboard/category', CategoryController::class);
+Route::resource('dashboard/video', VideoController::class);
+Route::resource('dashboard/voice', VoiceController::class);
+Route::resource('dashboard/image', ImageController::class);
+Route::resource('dashboard/gallary', GallaryController::class);
+Route::resource('dashboard/feedback', FeedbackController::class);
 Route::get('dashboar/words', [WordController::class, 'index'])->name('words.index');
 
 Route::view('/comment', 'front.comment');
