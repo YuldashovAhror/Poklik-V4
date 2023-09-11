@@ -4,15 +4,24 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Models\Service;
+use App\Models\ServiceComment;
+use App\Models\ServiceGallery;
+use App\Models\ServiceImage;
 use Illuminate\Http\Request;
 
 class ServiceController extends BaseController
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    private $servicecommentController;
+    private $serviceimageController;
+    private $servicegalleryController;
+    public function __construct(ServiceCommentController $servicecommentController, ServiceImageController $serviceimageController, ServiceGalleryController $servicegalleryController)
+    {
+        $this->servicecommentController = $servicecommentController;
+        $this->serviceimageController = $serviceimageController;
+        $this->servicegalleryController = $servicegalleryController;
+    }
+
+
     public function index()
     {
         $services = Service::orderBy('id', 'desc')->get();
@@ -39,6 +48,7 @@ class ServiceController extends BaseController
      */
     public function store(Request $request)
     {
+        // dd($request->all());
         $request = $request->toArray();
         
         if (!empty($request['main_photo'])){
@@ -46,6 +56,9 @@ class ServiceController extends BaseController
         }
         if (!empty($request['second_photo'])){
             $request['second_photo'] = $this->photoSave($request['second_photo'], 'image/service');
+        }
+        if (!empty($request['ok'])){
+            $request['ok'] = 1;
         }
         
         Service::create($request);
@@ -97,6 +110,12 @@ class ServiceController extends BaseController
             $this->fileDelete('\Service', $id, 'second_photo');
             $request['second_photo'] = $this->photoSave($request['second_photo'], 'image/service');
         }
+        if (!empty($request['ok'])){
+            $request['ok'] = 1;
+        }
+        if (empty($request['ok'])){
+            $request['ok'] = 0;
+        }
         
         Service::find($id)->update($request);
         return redirect()->route('service.index');
@@ -112,6 +131,20 @@ class ServiceController extends BaseController
     {
         $this->fileDelete('\Service', $id, 'main_photo');
         $this->fileDelete('\Service', $id, 'second_photo');
+
+        foreach (ServiceComment::where('service_id', $id)->get() as $prod){
+            $this->servicecommentController->destroy($prod->id);
+        }
+
+        foreach (ServiceComment::where('service_id', $id)->get() as $prod){
+            $this->servicecommentController->destroy($prod->id);
+        }
+        foreach (ServiceImage::where('service_id', $id)->get() as $prod){
+            $this->serviceimageController->destroy($prod->id);
+        }
+        foreach (ServiceGallery::where('service_id', $id)->get() as $prod){
+            $this->servicegalleryController->destroy($prod->id);
+        }
         Service::find($id)->delete();
         return back();
     }

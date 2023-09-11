@@ -50,7 +50,7 @@
             <div class="footer__column">
                 <span class="footer__column-txt general-GR">({{__('asd.телефоны')}})</span>
                 <!-- /.footer__column-txt -->
-                <a href="tel:" class="footer__column-content general-GR">97 777 97 77</a>
+                <a href="tel:+998997079999" class="footer__column-content general-GR">(99)707-99-99</a>
                 <!-- /.footer__column-content -->
             </div>
             <!-- /.footer__column -->

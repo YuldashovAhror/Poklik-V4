@@ -30,17 +30,22 @@ function img_load () {
 
 $(window).on('load', function () {
     $('.callback, .popup__btn').click( (event)=> {
+        $('.popup__success').fadeOut('0');
         event.preventDefault();
         $('.popup__back').slideDown('200')
         setTimeout(()=> {
             $('.popup').fadeIn('200');
+            $('.popup__stock').fadeIn('200');
         }, 250)
     });
 
-    $('.popup__close').click(()=> {
+    $('.popup__close, .popup__done').click(()=> {
         $('.popup').fadeOut('200');
+        $('.popup__stock').fadeOut('200');
+        $('.popup__container').fadeOut('200');
         setTimeout(()=> {
             $('.popup__back').slideUp('200');
+            $('.popup__success').fadeOut('0');
         }, 250)
     })
 
@@ -49,7 +54,24 @@ $(window).on('load', function () {
         $(this).parent().toggleClass('active')
         $(this).parent().children('.box__links').slideToggle('200')
     })
+    $('.menu__container a').click(function () {
+        $('.menu').slideUp();
+    })
 
+    setTimeout(function () {
+        $('.popup__screen').css({
+            'right': 0,
+            'opacity': 1
+        })
+    }, 3000)
+
+    $('.popup__screen-close').click(function (e) {
+        e.preventDefault();
+        $('.popup__screen').css({
+            'right': '-120%',
+            'opacity': 0
+        })
+    })
 
     $('button.header__menu').click(function (event) {
         event.preventDefault();
@@ -57,6 +79,19 @@ $(window).on('load', function () {
         $(this).toggleClass('active');
         $('.menu__box .box').removeClass('active');
     })
+
+    let container = $('.count');
+    let scrollStep = 260; // Количество пикселей для прокрутки
+
+    // Прокрутка вправо
+    $('.count__next').on('click', function() {
+        container.scrollLeft(container.scrollLeft() + scrollStep);
+    });
+
+    // Прокрутка влево
+    $('.count__prev').on('click', function() {
+        container.scrollLeft(container.scrollLeft() - scrollStep);
+    });
 
     const animItems = document.querySelectorAll(`.anima-blocks`)
     if (animItems.length > 0) {
@@ -112,7 +147,7 @@ $(window).on('load', function () {
         delay: 0, // values from 0 to 3000, with step 50ms
         duration: 400, // values from 0 to 3000, with step 50ms
         easing: 'ease', // default easing for AOS animations
-        once: false, // whether animation should happen only once - while scrolling down
+        once: true, // whether animation should happen only once - while scrolling down
         mirror: false, // whether elements should animate out while scrolling past them
         anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 

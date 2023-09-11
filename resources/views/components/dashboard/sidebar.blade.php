@@ -76,6 +76,36 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{route('comment.index')}}">
+                        <i class="uil-star"></i>
+                        <span>Главная FAQ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('serviceimage.index')}}">
+                        <i class="uil-star"></i>
+                        <span>Образ службы</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('servicegallery.index')}}">
+                        <i class="uil-star"></i>
+                        <span>Галерея услуг</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('servicecomment.index')}}">
+                        <i class="uil-star"></i>
+                        <span>Сервис FAQ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('clientcomment.index')}}">
+                        <i class="uil-star"></i>
+                        <span>Комментарии клиентов</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{route('feedback.index')}}">
                         <i class="uil-star"></i>
                         <span>Обратная связь</span>

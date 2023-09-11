@@ -5,8 +5,7 @@
   position: relative; }
   .custom-select__option {
     overflow: hidden;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     display: block;
     width: 100%;
     padding: 0;
@@ -18,18 +17,14 @@
     text-align: left;
     text-overflow: ellipsis;
     cursor: pointer;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    user-select: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; }
   .custom-select__option-wrap {
     position: relative; }
   .custom-select__input {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     display: block;
     width: 100%;
     padding: 0;
@@ -42,8 +37,7 @@
     appearance: none; }
   .custom-select__dropdown {
     position: absolute;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     width: 100%;
     top: 100%;
     left: 0; }
@@ -71,8 +65,7 @@
     border-radius: 0.25rem; }
     .custom-select__option--value::after {
       position: absolute;
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
+      box-sizing: border-box;
       width: 0;
       height: 0;
       top: 50%;
@@ -81,12 +74,10 @@
       border-bottom-width: 0;
       border-style: solid;
       border-color: currentColor transparent;
-      -webkit-transform: translateY(-50%);
-              transform: translateY(-50%);
+      transform: translateY(-50%);
       content: ""; }
       .custom-select--active .custom-select__option--value::after {
-        -webkit-transform: translateY(-50%) rotate(-180deg);
-                transform: translateY(-50%) rotate(-180deg); }
+        transform: translateY(-50%) rotate(-180deg); }
     .custom-select--active .custom-select__option--value {
       border-bottom-color: transparent;
       border-radius: 0.25rem 0.25rem 0 0; }
@@ -121,8 +112,7 @@
   margin-top: -1px;
   padding: 0 0.75rem;
   border-color: #e6e6e6;
-  -webkit-transform: translateY(1px);
-          transform: translateY(1px);
+  transform: translateY(1px);
   font-size: 1rem;
   color: #212121; }
   .custom-select__input:focus {
@@ -130,8 +120,7 @@
   .custom-select--dropup .custom-select__input {
     border-top-width: 0;
     margin-top: 0;
-    -webkit-transform: translateY(0);
-            transform: translateY(0); }
+    transform: translateY(0); }
 .custom-select__dropdown {
   overflow: hidden;
   z-index: 1;

@@ -1,5 +1,5 @@
 <!-- App favicon -->
-<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
 
 <!-- Bootstrap Css -->
 <link href="/assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />

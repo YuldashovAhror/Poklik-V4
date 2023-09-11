@@ -80,6 +80,14 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-1 mb-3">
+                                <label class="form-label" for="name_en">Сервис Да/нет/</label>
+                                <div class="input-group" style="font-size: 15px">
+                                    <input type="checkbox" id="ok" name="ok" >
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-footer text-end">
                         <button class="btn btn-primary" type="submit">Сохранить</button>

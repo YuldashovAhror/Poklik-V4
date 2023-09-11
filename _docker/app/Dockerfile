@@ -1,12 +1,6 @@
 FROM php:8.1-fpm
 
 RUN apt-get update && apt-get install -y libwebp-dev\
-    set -x \
-    && add-apt-repository ppa:mc3man/trusty-media \
-    && apt-get update \
-    && apt-get dist-upgrade \
-    && apt-get install -y --no-install-recommends \
-    ffmpeg \ 
     apt-utils \
     libjpeg62-turbo-dev \
     libpq-dev \
@@ -36,3 +30,5 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && \
     npm install -g npm
 
 WORKDIR /var/www
+
+

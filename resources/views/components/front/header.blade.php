@@ -53,24 +53,24 @@
             <div class="header__column">
                 <div class="languages">
                     <a href="" class="languages__lang languages__active general-GR">
-                        <img src="/img/icons/ru.svg" alt="">
-                        <span>@if($lang == 'uz') Uzbekcha @elseif($lang == 'ru') Русский @elseif($lang == 'en') English<a href="/languages/ru" >Русский</a>@endif</span>
+                        @if($lang == 'uz')<img src="/img/icons/uz.svg" alt="">@elseif($lang == 'ru') <img src="/img/icons/ru.svg" alt=""> @elseif($lang == 'en')<img src="/img/icons/en.svg" alt="">@endif
+                        <span>@if($lang == 'uz') Uzbekcha @elseif($lang == 'ru') Русский @elseif($lang == 'en') English @endif</span>
                         <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11 1L6 6L1 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </a>
                     <!-- /.languages__lang languages__active -->
-                    <div class="languages__list" style="opacity: 1; visibility: visible">
+                    <div class="languages__list">
                         @if($lang != 'ru')<a href="/languages/ru" class="languages__lang general-GR">
                             <img src="/img/icons/ru.svg" alt="">
                             <span>Русский</span>
                         </a>@endif
                         @if($lang != 'uz')<a href="/languages/uz" class="languages__lang general-GR">
-                            <img src="/img/icons/ru.svg" alt="">
+                            <img src="/img/icons/uz.svg" alt="">
                             <span>Uzbekcha</span>
                         </a>@endif
                         @if($lang != 'en')<a href="/languages/en" class="languages__lang general-GR">
-                            <img src="/img/icons/ru.svg" alt="">
+                            <img src="/img/icons/en.svg" alt="">
                             <span>English</span>
                         </a>@endif
                     </div>
@@ -98,11 +98,11 @@
                     <!-- /.messengers__link -->
                 </div>
                 <!-- /.messengers -->
-                <a href="tel:" class="header__call">
+                <a href="tel:+998997079999" class="header__call">
                     <img src="/img/icons/tel.png" alt="">
-                    <p class="general-M">
-                        {{__('asd.Telefon qilish')}}
-                        <span class="general-R">+ 998 90 123 45 67</span>
+                    <p class="general-GM">
+                        {{__('asd.Позвоните нам')}}
+                        <span class="general-GM">(99)707-99-99</span>
                         <!-- /.general-R -->
                     </p>
                     <!-- /.general-M -->
@@ -123,8 +123,9 @@
                     <a href="/#section__services" class="general-GR">{{__('asd.Услуги')}}</a>
                     <!-- /.general-M -->
                     <a href="/#section__how" class="general-GR">{{__('asd.Этапы работы')}}</a>
-                    <a href="/#section__result" class="general-GR">{{__('asd.Результаты работ')}}</a>
-                    <a href="/#section__review" class="general-GR">{{__('asd.Отзывы')}}</a>
+                    <a href="/result" class="general-GR">{{__('asd.Результаты работ')}}</a>
+                    <a href="/gallery" class="general-GR">{{__('asd.Галлерия')}}</a>
+                    <a href="/comment" class="general-GR">{{__('asd.Отзывы')}}</a>
                     <a href="/#section__faq" class="general-GR">{{__('asd.Вопрос/Ответ')}}</a>
                     <!-- /.general-M -->
                 </div>
@@ -141,14 +142,35 @@
 
 <div class="menu">
     <div class="menu__container">
-        <a href="#section__about" class="general-GR">{{__('asd.О компании')}}</a>
-        <!-- /.general-M -->
-        <a href="/services" class="general-GR">{{__('asd.Услуги')}}</a>
-        <!-- /.general-M -->
-        <a href="#section__how" class="general-GR">{{__('asd.Этапы работы')}}</a>
-        <a href="#section__result" class="general-GR">{{__('asd.Результаты работ')}}</a>
-        <a href="#section__review" class="general-GR">{{__('asd.Отзывы')}}</a>
-        <a href="#section__faq" class="general-GR">{{__('asd.Вопрос/Ответ')}}</a>
+        <a href="/#section__about" class="general-GR">{{__('asd.О компании')}}</a>
+                    <!-- /.general-M -->
+                    <a href="/#section__services" class="general-GR">{{__('asd.Услуги')}}</a>
+                    <!-- /.general-M -->
+                    <a href="/#section__how" class="general-GR">{{__('asd.Этапы работы')}}</a>
+                    <a href="/result" class="general-GR">{{__('asd.Результаты работ')}}</a>
+                    <a href="/gallery" class="general-GR">{{__('asd.Галлерия')}}</a>
+                    <a href="/comment" class="general-GR">{{__('asd.Отзывы')}}</a>
+                    <a href="/#section__faq" class="general-GR">{{__('asd.Вопрос/Ответ')}}</a>
+      <div class="languages__list" style='display: flex; gap: 1rem'>
+                        <a href="/languages/ru" class="languages__lang general-GR">
+                            <img src="/img/icons/ru.svg" style="    width: 2.5rem;
+    height: auto;
+    object-fit: cover;" alt="">
+                            <span>Ru</span>
+                        </a>
+                        <a href="/languages/uz" class="languages__lang general-GR">
+                            <img src="/img/icons/uz.svg" style="    width: 2.5rem;
+    height: auto;
+    object-fit: cover;" alt="">
+                            <span>Uz</span>
+                        </a>
+                        <a href="/languages/en" class="languages__lang general-GR">
+                            <img src="/img/icons/en.svg" style="    width: 2.5rem;
+    height: auto;
+    object-fit: cover;" alt="">
+                            <span>En</span>
+                        </a>
+                    </div>  
     </div>
     <!-- /.menu__container -->
     <div class="messengers">

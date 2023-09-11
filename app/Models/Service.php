@@ -21,5 +21,21 @@ class Service extends Model
         'discription_uz',
         'discription_ru',
         'discription_en',
+        'ok',
     ];
+
+    public function comments()
+    {
+        return $this->hasMany(ServiceComment::class);
+    }
+
+    public function galleries()
+    {
+        return $this->hasMany(ServiceGallery::class);
+    }
+
+    public function Images()
+    {
+        return $this->hasMany(ServiceImage::class);
+    }
 }

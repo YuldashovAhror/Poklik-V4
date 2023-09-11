@@ -50,6 +50,22 @@
             position: absolute;
             opacity: 0;
             visibility: hidden;
+            background-color: var(--main-color-one);
+            padding: 1rem .7rem;
+            border-radius: .5rem;
+            a {
+                color: var(--main-color-white);
+                margin-bottom: .5rem;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &:hover {
+            .languages__list {
+                opacity: 1;
+                visibility: visible;
+            }
         }
     }
     .messengers {
@@ -95,7 +111,7 @@
             font-size: .8rem;
             span {
                 display: block;
-                font-size: .65rem;
+                font-size: .9rem;
             }
         }
     }

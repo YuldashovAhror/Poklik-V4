@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <title></title>
+    <title>Poklik</title>
     <meta name="description" content="">
     <meta name="keywords" content=""/>
     <meta name="author" content="Novas"/>
@@ -13,7 +13,7 @@
     <!--=======css Links======-->
     <!--    <link rel="manifest" href="img/favicon/site.webmanifest">-->
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('/img/favicon.svg') }}">
+    <link rel="shortcut icon" href="{{ asset('/favicon.svg') }}">
 
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/fancybox.css">
